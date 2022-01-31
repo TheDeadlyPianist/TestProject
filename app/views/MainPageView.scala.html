@@ -1,6 +1,14 @@
 @this()
-@()(implicit messages: Messages)
+@(stuff: Seq[String])(implicit messages: Messages)
 
-<h1>@messages("mainPage.title")</h1>
+@pageTitle = @{
+    messages("mainPage.title")
+}
+    
+<h1>@pageTitle</h1>
 
+@stuff.map{ element =>
+    <p>@element</p>
+}
+    
 <a href="@(controllers.routes.SecondPageController.show().url)">@messages("mainPage.goToSecond")</a>

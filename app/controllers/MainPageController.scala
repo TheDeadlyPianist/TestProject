@@ -12,7 +12,19 @@ class MainPageController@Inject()(
                                  ) extends FrontendController(controllerComponents) {
 
   def show(): Action[AnyContent] = Action { implicit request =>
-    Ok(view())
+    val stuff: Seq[String] = Seq(
+      "Hello",
+      "World",
+      "I",
+      "Took",
+      "An",
+      "Arrow",
+      "To",
+      "The",
+      "Knee"
+    )
+    
+    Ok(view(stuff))
   }
   
 }
