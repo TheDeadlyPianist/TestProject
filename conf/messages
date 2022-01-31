@@ -1,1 +1,5 @@
 mainPage.title = Main Page
+mainPage.goToSecond = Go to second page
+
+secondPage.title = Second Page
+secondPage.goToFirst = Go to first page

@@ -1,0 +1,6 @@
+@this()
+@()(implicit messages: Messages)
+
+<h1>@messages("secondPage.title")</h1>
+
+<a href="@(controllers.routes.MainPageController.show())">@messages("secondPage.goToFirst")</a>
